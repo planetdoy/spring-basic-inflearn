@@ -15,7 +15,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
 
     @Autowired //생략하는게 트렌드 물론 스프링 빈에 한해서
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
